@@ -13,14 +13,24 @@ function App() {
 
   const [gameStage, setGameStage] = useState(stages[0].name);
 
+  const startGame = () => {
+    setGameStage(stages[1].name);
+  };
+  const verifyGame = () => {
+    setGameStage(stages[2].name);
+  };
+  const resetGame = () => {
+    setGameStage(stages[0].name);
+  };
+
   const [worlds] = useState(wordsList);
 
   return (
     <div className="App">
       <header>
-        {gameStage === "start" && <StartPage />}
-        {gameStage === "game" && <Game />}
-        {gameStage === "end" && <GameOver />}
+        {gameStage === "start" && <StartPage props={startGame} />}
+        {gameStage === "game" && <Game props={verifyGame} />}
+        {gameStage === "end" && <GameOver props={resetGame} />}
       </header>
     </div>
   );
