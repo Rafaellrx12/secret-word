@@ -13,7 +13,38 @@ function App() {
 
   const [gameStage, setGameStage] = useState(stages[0].name);
 
+  const [worlds] = useState(wordsList);
+
+  const [pickedWord, setPickedWord] = useState("");
+  const [pickedCategory, setpickedCategory] = useState("");
+  const [letters, setLetters] = useState("");
+
+  const PickedWordsAndCategories = () => {
+    const categorias = Object.keys(worlds);
+    const categoriaEscolhida =
+      categorias[Math.floor(Math.random() * Object.keys(worlds).length)];
+    const arrayDaCategoriaEscolhida = worlds[categoriaEscolhida];
+
+    const palavraEscolhida =
+      arrayDaCategoriaEscolhida[
+        Math.floor(Math.random() * arrayDaCategoriaEscolhida.length)
+      ];
+
+    return { categoriaEscolhida, palavraEscolhida };
+  };
+
   const startGame = () => {
+    const { categoriaEscolhida, palavraEscolhida } = PickedWordsAndCategories();
+
+    setpickedCategory(categoriaEscolhida);
+    setPickedWord(palavraEscolhida);
+
+    let wordLetters = palavraEscolhida.split("");
+    wordLetters = wordLetters.map((l) => l.toLowerCase());
+
+    console.log(categoriaEscolhida,palavraEscolhida);
+    console.log(wordLetters);
+
     setGameStage(stages[1].name);
   };
   const verifyGame = () => {
@@ -23,14 +54,12 @@ function App() {
     setGameStage(stages[0].name);
   };
 
-  const [worlds] = useState(wordsList);
-
   return (
     <div className="App">
       <header>
-        {gameStage === "start" && <StartPage props={startGame} />}
-        {gameStage === "game" && <Game props={verifyGame} />}
-        {gameStage === "end" && <GameOver props={resetGame} />}
+        {gameStage === "start" && <StartPage startGame={startGame} />}
+        {gameStage === "game" && <Game verifyGame={verifyGame} />}
+        {gameStage === "end" && <GameOver resetGame={resetGame} />}
       </header>
     </div>
   );
