@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  color: white;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(180deg, rgb(6, 2, 255), rgb(10, 30, 141));
+  font-family: Helvetica;
+}
+
+button {
+  color: white;
+  background-color: rgb(38, 62, 167);
+  padding: 15px 60px;
+  font-size: 1.5em;
+  border: 2px solid white;
+  border-radius: 35px;
+  font: bold;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(18, 45, 136);
+  transition: 0.4s;
+}
+button:active{
+  background-color: rgb(176, 184, 178);
+}

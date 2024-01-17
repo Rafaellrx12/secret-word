@@ -1,0 +1,11 @@
+.start h1 {
+  color: rgb(255, 255, 255);
+  font-size: 4em;
+  margin: 50px 0px;
+}
+
+.start p {
+  color: rgb(228, 240, 59);
+  font-size: 1.5em;
+  margin: 50px 0px;
+}
