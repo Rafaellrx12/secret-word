@@ -18,6 +18,10 @@ function App() {
   const [pickedWord, setPickedWord] = useState("");
   const [pickedCategory, setpickedCategory] = useState("");
   const [letters, setLetters] = useState("");
+  const [guessedLetters, setGuessedLetters] = useState("");
+  const [wrongLetters, setWrongLetters] = useState([]);
+  const [guesses, setGuesses] = useState(3);
+  const [score, setScore] = useState("");
 
   const PickedWordsAndCategories = () => {
     const categorias = Object.keys(worlds);
@@ -42,8 +46,9 @@ function App() {
     let wordLetters = palavraEscolhida.split("");
     wordLetters = wordLetters.map((l) => l.toLowerCase());
 
-    console.log(categoriaEscolhida,palavraEscolhida);
+    console.log(categoriaEscolhida, palavraEscolhida);
     console.log(wordLetters);
+    setLetters(wordLetters);
 
     setGameStage(stages[1].name);
   };
@@ -58,7 +63,18 @@ function App() {
     <div className="App">
       <header>
         {gameStage === "start" && <StartPage startGame={startGame} />}
-        {gameStage === "game" && <Game verifyGame={verifyGame} />}
+        {gameStage === "game" && (
+          <Game
+            verifyGame={verifyGame}
+            pickedWord={pickedWord}
+            pickedCategory={pickedCategory}
+            letters={letters}
+            guessedLetters={guessedLetters}
+            wrongLetters={wrongLetters}
+            guesses={guesses}
+            score={score}
+          />
+        )}
         {gameStage === "end" && <GameOver resetGame={resetGame} />}
       </header>
     </div>
