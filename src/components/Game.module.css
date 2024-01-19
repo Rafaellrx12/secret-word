@@ -17,17 +17,22 @@
   border: 20px solid rgb(248, 204, 84);
   display: flex;
 }
-.letter,
+
+.tip span {
+  color: #ecfa00;
+}
+
+.guessedLetters,
 .blankSquare {
-  border: 3px solid black;
   font-size: 70px;
   line-height: 1.5;
-  width: 100px;
+  border: 3px solid #000;
   height: 100px;
+  width: 100px;
   text-transform: uppercase;
-  background-color: white;
+  background-color: #fff;
+  color: #000;
   font-weight: bold;
-  color: black;
 }
 
 .letterContainer p {
@@ -36,14 +41,19 @@
   font-weight: bold;
   font-size: large;
 }
+
 .letterContainer form {
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
+
 .letterContainer input {
-  width: 80px;
-  height: 80px;
+  height: 50px;
+  width: 50px;
+  font-size: 2em;
   text-align: center;
+  margin-right: 1em;
 }
 .letterContainer button {
   margin-left: 1em;

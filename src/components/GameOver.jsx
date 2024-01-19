@@ -1,12 +1,15 @@
 import Styles from "./GameOver.module.css";
 
-const GameOver = ({resetGame}) => {
+const GameOver = ({ resetGame, score }) => {
   return (
     <div>
-        <h1>Game Over</h1>
-        <button onClick={resetGame}>Finalizar jogo</button>
+      <h1>Fim de jogo!</h1>
+      <h2>
+        A sua pontuação foi: <span className={Styles.h2_span}>{score}</span>!
+      </h2>
+      <button onClick={resetGame}>Reiniciar</button>
     </div>
-  )
-}
+  );
+};
 
-export default GameOver
+export default GameOver;

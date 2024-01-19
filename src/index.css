@@ -6,8 +6,23 @@ body {
   color: white;
   padding: 0;
   margin: 0;
-  background: linear-gradient(180deg, rgb(6, 2, 255), rgb(10, 30, 141));
+  background: linear-gradient(45deg, #07102c, #162f80, #1b47d3);
+  background-size: 300% 300%;
+  animation: colors 10s ease infinite;
   font-family: Helvetica;
+  margin-top: 150px;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 button {
@@ -24,6 +39,6 @@ button:hover {
   background-color: rgb(18, 45, 136);
   transition: 0.4s;
 }
-button:active{
+button:active {
   background-color: rgb(176, 184, 178);
 }

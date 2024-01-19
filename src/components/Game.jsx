@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import Styles from "./Game.module.css";
 
 const Game = ({
@@ -10,11 +11,23 @@ const Game = ({
   guesses,
   score,
 }) => {
+  const [letter, setLetter] = useState("");
+  const letterInputRef = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    verifyGame(letter);
+
+    setLetter("");
+    letterInputRef.current.focus();
+  };
   return (
     <>
       <div className={Styles.game}>
         <p className={Styles.points}>
-          <span>Pontuação: {score}</span>
+          <span>Pontuação: </span>
+          {score}
         </p>
         <h1>Advinhe a palavra: </h1>
 
@@ -28,8 +41,8 @@ const Game = ({
         <p>Você ainda tem {guesses} tentativas</p>
         <div className={Styles.wordContainer}>
           {letters.map((letter, i) =>
-            guessedLetters.includes(letters) ? (
-              <span key={i} className={Styles.letters}>
+            guessedLetters.includes(letter) ? (
+              <span key={i} className={Styles.guessedLetters}>
                 {letter}
               </span>
             ) : (
@@ -39,13 +52,21 @@ const Game = ({
         </div>
         <div className={Styles.letterContainer}>
           <p>Tente advinhar uma letra da palavra</p>
-          <form>
-            <input type="text" name="letter" maxLength="1" required />
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="letter"
+              maxLength="1"
+              required
+              onChange={(e) => setLetter(e.target.value)}
+              value={letter}
+              ref={letterInputRef}
+            />
             <button>Jogar</button>
           </form>
         </div>
         <div className={Styles.wrongLettersContainer}>
-          <p>Letras já utilizadas</p>
+          <p>Letras Erradas</p>
           <div className={Styles.letrasErradas}>
             {wrongLetters.map((letter, i) => (
               <span key={i} className={Styles.letrasErradas}>
@@ -53,6 +74,8 @@ const Game = ({
               </span>
             ))}
           </div>
+          <p>Letras já Utilizadas: </p>
+          {guessedLetters}
         </div>
       </div>
     </>
