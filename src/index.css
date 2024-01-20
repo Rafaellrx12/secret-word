@@ -21,16 +21,23 @@ html {
     width: 100px;
   }
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   color: white;
-  padding: 0;
-  margin: 0;
   background: linear-gradient(45deg, #d20000, #7462ff, #861f94, #23d5ab);
   background-size: 300% 300%;
   animation: colors 12s ease-in-out infinite;
   font-family: Helvetica;
-  margin-top: 100px;
+  min-height: 100%;
 }
 
 @keyframes colors {
