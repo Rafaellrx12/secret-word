@@ -2,15 +2,26 @@ html {
   height: 100%;
 }
 @media only screen and (max-device-width: 900px) {
-  body {
+  html {
     width: 100%;
   }
 }
 @media only screen and (max-device-width: 700px) {
-  body {
+  html {
     width: 400px;
   }
 }
+@media only screen and (max-device-width: 500px) {
+  html {
+    width: 300px;
+  }
+}
+@media only screen and (max-device-width: 200px) {
+  html {
+    width: 100px;
+  }
+}
+
 body {
   color: white;
   padding: 0;
@@ -19,7 +30,7 @@ body {
   background-size: 300% 300%;
   animation: colors 12s ease-in-out infinite;
   font-family: Helvetica;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 @keyframes colors {
