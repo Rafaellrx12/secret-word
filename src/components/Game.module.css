@@ -71,3 +71,188 @@
   font-size: 1.3em;
   color: #000;
 }
+@media only screen and (max-width: 600px) {
+  .game h1 {
+    font-size: 1.2em;
+  }
+
+  .points span {
+    font-size: 1em;
+  }
+
+  .wordContainer {
+    margin: 1em;
+    padding: 1em;
+    border: 10px solid rgb(248, 204, 84);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .guessedLetters,
+  .blankSquare {
+    font-size: 30px;
+    line-height: 1.2;
+    border: 2px solid #000;
+    height: 50px;
+    width: 50px;
+    margin: 0.2em;
+  }
+
+  .tip span {
+    font-size: 0.8em;
+  }
+
+  .letterContainer p {
+    margin: 5px 0;
+    font-size: medium;
+  }
+
+  .letterContainer form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .letterContainer input {
+    height: 30px;
+    width: 30px;
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  .letterContainer button {
+    margin-top: 5px;
+  }
+
+  .wrongLettersContainer p {
+    margin-bottom: 5px;
+    font-size: 1em;
+  }
+
+  .letrasErradas {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 412px) {
+  .game h1 {
+    font-size: 1.5em;
+  }
+
+  .points span {
+    font-size: 1.2em;
+  }
+
+  .wordContainer {
+    flex-direction: row;
+    margin: 0.2em;
+    padding: 0.2em;
+    border: 5px solid rgb(248, 204, 84);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .guessedLetters,
+  .blankSquare {
+    font-size: 28px;
+    line-height: 1.4;
+    border: 2px solid #000;
+    height: 38px;
+    width: 38px;
+    margin: 0.2em;
+  }
+
+  .tip span {
+    font-size: 1em;
+  }
+
+  .letterContainer p {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+
+  .letterContainer form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .letterContainer input {
+    height: 34px;
+    width: 34px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  .letterContainer button {
+    margin-top: 5px;
+    font-size: 1.2em;
+  }
+
+  .wrongLettersContainer p {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+  }
+
+  .letrasErradas {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+  .game h1 {
+    font-size: 2.5em;
+  }
+
+  .points span {
+    font-size: 1.8em;
+  }
+
+  .wordContainer {
+    margin: 1.5em; 
+    padding: 1.5em; 
+    border: 12px solid rgb(248, 204, 84); 
+  }
+
+  .guessedLetters,
+  .blankSquare {
+    font-size: 45px;
+    height: 55px;
+    width: 55px; 
+    margin: 0.5em; 
+  }
+
+  .tip span {
+    font-size: 1.4em;
+  }
+
+  .letterContainer p {
+    margin: 12px 0; 
+    font-size: 1.6em; 
+  }
+
+  .letterContainer form {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .letterContainer input {
+    height: 45px; 
+    width: 45px; 
+    font-size: 1.8em;
+    margin-right: 12px; 
+    margin-bottom: 0;
+  }
+
+  .letterContainer button {
+    margin-top: 0;
+    font-size: 1.8em; 
+  }
+
+  .wrongLettersContainer p {
+    margin-bottom: 12px;
+    font-size: 1.8em; 
+  }
+
+  .letrasErradas {
+    font-size: 1.4em; 
+  }
+}

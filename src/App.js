@@ -10,6 +10,7 @@ const stages = [
   { id: 2, name: "game" },
   { id: 3, name: "end" },
 ];
+const chances = 7;
 
 function App() {
   const [gameStage, setGameStage] = useState(stages[0].name);
@@ -21,7 +22,7 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
-  const [guesses, setGuesses] = useState(3);
+  const [guesses, setGuesses] = useState(chances);
 
   const [score, setScore] = useState(0);
 
@@ -78,7 +79,7 @@ function App() {
 
   const resetGame = () => {
     setScore(0);
-    setGuesses(3);
+    setGuesses(chances);
     setGameStage(stages[0].name);
   };
 
