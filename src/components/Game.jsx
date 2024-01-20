@@ -74,8 +74,6 @@ const Game = ({
               </span>
             ))}
           </div>
-          <p>Letras já Utilizadas: </p>
-          {guessedLetters}
         </div>
       </div>
     </>

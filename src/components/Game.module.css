@@ -58,15 +58,16 @@
 .letterContainer button {
   margin-left: 1em;
 }
+.letterContainer {
+  margin-bottom: 10px;
+}
 
 .wrongLettersContainer p {
-  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-size: 2em;
   font: bold;
 }
 .letrasErradas {
-  border: 5px solid rgb(228, 105, 89);
-  font-size: large;
-  margin-right: 80px;
-  margin-left: 80px;
-  border-radius: 20px;
+  font-size: 1.3em;
+  color: #000;
 }
