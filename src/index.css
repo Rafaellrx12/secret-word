@@ -2,7 +2,14 @@ html {
   height: 100%;
 }
 @media only screen and (max-device-width: 900px) {
-  .body { width:100%; } 
+  body {
+    width: 100%;
+  }
+}
+@media only screen and (max-device-width: 700px) {
+  body {
+    width: 400px;
+  }
 }
 body {
   color: white;
