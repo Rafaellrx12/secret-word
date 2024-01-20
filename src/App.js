@@ -126,7 +126,11 @@ function App() {
           />
         )}
         {gameStage === "end" && (
-          <GameOver resetGame={resetGame} score={score} />
+          <GameOver
+            resetGame={resetGame}
+            score={score}
+            pickedWord={pickedWord}
+          />
         )}
       </header>
     </div>

@@ -2,3 +2,9 @@
   color: #ecfa00;
   font-size: 1.5em;
 }
+
+.palavra span {
+  color: yellow;
+  font: bold;
+  font-size: 1.5em;
+}
