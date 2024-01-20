@@ -12,7 +12,6 @@ const stages = [
 ];
 
 function App() {
-
   const [gameStage, setGameStage] = useState(stages[0].name);
   const [words] = useState(wordsList);
 
@@ -27,7 +26,6 @@ function App() {
   const [score, setScore] = useState(0);
 
   const PickedWordsAndCategories = useCallback(() => {
-
     const categorias = Object.keys(words);
 
     const categoriaEscolhida =
@@ -38,12 +36,10 @@ function App() {
         Math.floor(Math.random() * arrayDaCategoriaEscolhida.length)
       ];
 
-
     return { categoriaEscolhida, palavraEscolhida };
   }, [words]);
 
   const startGame = useCallback(() => {
-
     clearLetterStates();
     const { categoriaEscolhida, palavraEscolhida } = PickedWordsAndCategories();
     let wordLetters = palavraEscolhida.split("");
@@ -79,7 +75,7 @@ function App() {
       setGuesses((actualGuesses) => actualGuesses - 1);
     }
   };
-  
+
   const resetGame = () => {
     setScore(0);
     setGuesses(3);
