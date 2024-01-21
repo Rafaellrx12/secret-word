@@ -69,8 +69,8 @@ const Game = ({
           <p>Letras Erradas</p>
           <div className={Styles.letrasErradas}>
             {wrongLetters.map((letter, i) => (
-              <span key={i} className={Styles.letrasErradas.toUpperCase()}>
-                {letter} ,{" "}
+              <span key={i} className={Styles.letrasErradas}>
+                {letter.toUpperCase()} ,{" "}
               </span>
             ))}
           </div>
