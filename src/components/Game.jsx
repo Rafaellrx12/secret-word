@@ -59,7 +59,7 @@ const Game = ({
               maxLength="1"
               required
               onChange={(e) => setLetter(e.target.value.toLowerCase())}
-              value={letter}
+              value={letter.toUpperCase()}
               ref={letterInputRef}
             />
             <button>Jogar</button>
@@ -69,7 +69,7 @@ const Game = ({
           <p>Letras Erradas</p>
           <div className={Styles.letrasErradas}>
             {wrongLetters.map((letter, i) => (
-              <span key={i} className={Styles.letrasErradas}>
+              <span key={i} className={Styles.letrasErradas.toUpperCase()}>
                 {letter} ,{" "}
               </span>
             ))}
