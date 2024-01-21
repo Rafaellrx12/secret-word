@@ -17,7 +17,7 @@ const Game = ({
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    verifyGame();
+    verifyGame(letter);
 
     setLetter("");
     letterInputRef.current.focus();
@@ -58,8 +58,8 @@ const Game = ({
               name="letter"
               maxLength="1"
               required
-              onChange={(e) => setLetter(e.target.value)}
-              value={letter.toLowerCase()}
+              onChange={(e) => setLetter(e.target.value.toLowerCase())}
+              value={letter}
               ref={letterInputRef}
             />
             <button>Jogar</button>
